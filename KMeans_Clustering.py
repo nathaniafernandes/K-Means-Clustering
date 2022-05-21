@@ -8,8 +8,6 @@
 # ## K- Means Clustering
 # 
 
-# In[57]:
-
 
 # Importing the libraries
 import numpy as np
@@ -21,10 +19,6 @@ from sklearn import datasets
 iris = pd.read_csv('C:\\Users\Melywn Fernades\Downloads\Iris.csv')
 iris_df = pd.DataFrame(iris, columns=['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm'])
 iris_df
-
-
-# In[56]:
-
 
 x = iris_df.iloc[:, [0, 1, 2, 3]].values
 from sklearn.cluster import KMeans
@@ -43,15 +37,10 @@ plt.ylabel('WCSS') # Within cluster sum of squares
 plt.show()
 
 
-# In[41]:
-
 
 # Applying kmeans to the dataset / Creating the kmeans classifier
 kmeans = KMeans(n_clusters = 3, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
 y_kmeans = kmeans.fit_predict(x)
-
-
-# In[47]:
 
 
 # Visualising the clusters - On the first two columns
